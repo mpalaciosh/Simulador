@@ -3,7 +3,17 @@ let tituloS= document.getElementById('titulo')
 tituloS.style.color="black"
 tituloS.style.textAlign ="center"
 
-const arrayTasas = new Array();
+
+
+const arrayTasas = [
+    { plazo: 24, tiempo: 720, teaS: 0.0385, teaD: 0.01 },
+    { plazo: 12, tiempo: 360, teaS: 0.035, teaD: 0.0070 },
+    { plazo:  6, tiempo: 180, teaS: 0.0175, teaD: 0.0050 },
+    { plazo:  3, tiempo: 90, teaS: 0.0150, teaD: 0.0035 }
+]
+
+//Codigo para json que no funciono
+/*const arrayTasas = new Array();
 const URLJSON = "plazos.json"
 
 
@@ -23,7 +33,7 @@ async function getElements() {
 
     })
     mostrarTasas();
-}
+}*/
 
 //funcion para mostrar tasas en index
 function mostrarTasas(){
@@ -45,6 +55,7 @@ arrayTasas.forEach((item) => {
 $("#botonesTasa").prepend(`<div> </div> <div> </div> <div>  </div><div> <button id="simuSoles">Simular</button> </div> <div> <button id="simuDolar">Simular</button></div>`);
 }
 
+mostrarTasas();
 
 const arrayCliente = []
 let nombre
@@ -81,8 +92,8 @@ function calculoInteres() {
 
 
 
-//var guardado = localStorage.getItem('listaCliente');
-//console.log('Lista Cliente: ', JSON.parse(guardado));
+var guardado = localStorage.getItem('listaCliente');
+console.log('Lista Cliente: ', JSON.parse(guardado));
 
 
 // funcion para mostrar resultados de calculo de plazo fijo

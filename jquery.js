@@ -82,9 +82,7 @@ $(document).ready(() => {
 
             if (estado == "success") {
                 $("#respuestaFinal").show();
-                $("#respuestaFinal").prepend(` <h3> Sus datos se enviaron satisfactoriamente ${respuesta.nombre}</h3>`);
-                $("#respuestaFinal").prepend(`<input type="button" value="Aceptar" id="regresar">`);
-
+                $("#respuestaFinal").prepend(` <h3> Sus datos se enviaron satisfactoriamente ${respuesta.nombre}</h3> <input type="button" value="Aceptar" id="regresar">`);
                 $("#regresar").on("click", () => {
                     $("#respuestaFinal").hide();
                     $("#enviarDatos").prop('disabled', true);
