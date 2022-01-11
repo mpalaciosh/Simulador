@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo Plazo Fijo</title>
+    <link rel="stylesheet" href="cssSimulador.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    
+</head>
+<body> 
+  <div class="container">
+    <h1 id="titulo">Calculadora de Deposito a Plazo Fijo</h1>
+  </div>
+
+
+<div class="encabezados">
+  <div><p>Plazo Meses</p></div>
+  <div><p>Esquema de Plazos</p></div>
+  <div><p>TEA - Soles</p></div>
+  <div><p>TEA - Dolares</p></div>
+</div>
+
+<div id="tasasTodos"></div>
+<div id="botonesTasa" class="padreTasa"></div>
+
+
+<div id="soliDatosSol" class="padreFlex2">
+
+  <h3>Ingrese los datos para hacer los calculos</h3>
+    <form id="formulario"> 
+    Ingrese Nombre <input  type="text" name="nombre" id="nombreSol"> <br>
+    Ingrese Importe <input type="number"  name="importe"  id="importeSol"><br>
+
+    <input type="button" value="Calcular" id="clickCalcularSoles">  
+    <input type="reset" value="Limpiar datos" id="clickLimpiarSoles">
+    </form>
+</div>
+
+<div id="soliDatosDol" class="padreFlex2">
+
+  <h3>Ingrese los datos para hacer los calculos</h3>
+    <form id="formulario"> 
+    Ingrese Nombre <input  type="text" name="nombre" id="nombreDol"> <br>
+    Ingrese Importe <input type="number"  name="importe"  id="importeDol"><br>
+
+    <input type="button" value="Calcular" id="clickCalcularDolar">  
+    <input type="reset" value="Limpiar datos" id="clickLimpiarDolar">
+    </form>
+</div>
+<br><br>
+
+
+<div id="resultadoPlazos"> </div>
+
+<div id="padreFinal" class="cajas">
+
+  <h3>Gracias por utilizar nuestro simulador </h3>
+    <input type="reset" value="Nueva Consulta" id="nuevaConsulta">  
+    <input type="button" value="Enviar Datos" id="enviarDatos">
+</div>
+
+<div id="formEnviarDatos" class="padreFlex4">
+
+  <h3>Ingrese sus datos, pronto nos comunicaremos con usted. Gracias</h3><br>
+    <form id="formulario"> 
+    Ingrese Nombre y Apellido <input  type="text" name="nombre" id="nombreSol1"> <br>
+    Ingrese Correo Electronico <input type="text" name="correo" id="correoElec"><br>
+    Ingrese Nro Telofono <input type="number"  name="telefono"  id="telefono"><br>
+    <input type="button" value="Enviar Datos" id="enviarformDatos">
+    
+
+    </form>
+</div>
+<div id="respuestaFinal" class="cajas">
+
+</div>
+
+
+
+  <script src="eventos.js"></script>
+  <script src="jquery.js"></script>
+
+
+
+
+</body>
+</html>
